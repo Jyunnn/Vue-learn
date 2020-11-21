@@ -3,4 +3,4 @@
 
 [01_](https://github.com/Jyunnn/Vue-learn/blob/main/01_Start.md)
 
-[02_](https://github.com/Jyunnn/Vue-learn/blob/main/01_Watch.md)
+[02_](https://github.com/Jyunnn/Vue-learn/blob/main/02_Watch.md)

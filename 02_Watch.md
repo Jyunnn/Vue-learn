@@ -1,10 +1,10 @@
-# Vue3.0 開始
+# Vue3.0 watch
 ---
 &nbsp;
 `watch`可以監聽值的變化
 一樣要從`Vue`裡面取用
 ```js
-const { ref, reactive, watch } = Vue; 
+const { ref, reactive, watch } = Vue;
 ```
 
 開始時有提到`ref`和`reactive`其中一個差別是監聽的深度
@@ -29,7 +29,7 @@ watch(time.data ,(newval, oldval)=>{
 ```
 但這時候又會報錯
 
-> Invalid watch source:  0 A watch source can only be a getter/effect function, a ref, a reactive object, or an array of these types. 
+> Invalid watch source:  0 A watch source can only be a getter/effect function, a ref, a reactive object, or an array of these types.
 
 [官方文件](https://v3.vuejs.org/guide/reactivity-computed-watchers.html#watch)其實有提到,必須是一個回傳值
 ```js

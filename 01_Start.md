@@ -1,4 +1,4 @@
-# Vue3.0 開始
+# Vue3.0 start
 ---
 &nbsp;
 除了改用 `Vue.createApp`之外, 還可以使用`setup()`來讓環境更像在寫Javascript.
@@ -19,7 +19,7 @@ const app = {
 Vue.createApp(app).mount('#app')
 ```
 
-### ref 
+### ref
 可以接受所有型態的資料,呼叫值的時候必須要用`.value`
 ```js
     let imgIndex = ref(0);
@@ -30,7 +30,7 @@ Vue.createApp(app).mount('#app')
     <div id="app">
         {{ imgIndex }}
     </div>
-    
+
     <script>
     ... // 忽略Vue頭尾
         let imgIndex = ref(0);
@@ -50,5 +50,3 @@ Vue.createApp(app).mount('#app')
 
 &nbsp;
 &nbsp;
-
-
