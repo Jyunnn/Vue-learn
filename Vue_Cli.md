@@ -45,3 +45,8 @@
     ```
 6. 元件命名方式 :
    大寫開頭,如果是駝峰式命名,使用`<slot>`時要記得改用kebab case (改用小寫,並用'-'連結字串)
+
+7. Router History modes :
+   在使用`npm run build`後, 使用LiveServer首頁的部分可能會有問題, 因為`router`設定首頁是用`/`, LiveServer會把首頁導向index.html
+   此時可以暫時嘗試切換為`createWebHistory`, 不過不建議切換, 可以修改後端設定
+   [參考文件](https://next.router.vuejs.org/guide/essentials/history-mode.html#hash-mode)
