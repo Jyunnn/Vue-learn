@@ -67,3 +67,38 @@ _id為我要作為動態Router的頁面,所以路由必須加上`:`,
 ```html
 <router-link :to="`/product/${product.id}`">
 ```
+
+如果想獲取 `localhost:8080/product/1`的 id
+就要在`_id.vue`這個文件內把`useRoute`從`vue-router`解構出來
+```js
+import { useRoute } from 'vue-router';
+export default {
+  setup() {
+    const route = useRoute();
+    onMounted(() => {
+      const i = route.params.id;
+      console.log(i); // 1 就能拿到id了
+    });
+    return { route };
+  }
+};
+```
+這時候就能用這個id來提取相對應的資料了,
+但前提是在建構資料時要把id也建構進來
+
+如果是用Vue2.0的作法,
+可以用`this.$route.params.id`獲得
+
+```js
+export default {
+  data() {
+    return {
+      id: this.$route.params.id,
+      product: {},
+    };
+  },
+  mounted() {
+    this.product = products[this.id - 1];
+  },
+};
+```
