@@ -5,6 +5,7 @@ vuex可以在cli安裝前選擇是否要安裝,
 安裝後會在`store`內的`index.js`,
 可以將資料放進文件內
 
+`store\index.js`裡面應該是長這樣:
 ```js
 import { createStore } from 'vuex';
 
@@ -20,7 +21,7 @@ export default createStore({
 
 資料都會放在`state`內
 
-使用的方式有兩種,
+在元件內使用的方式有兩種,
 2.0的方法
 ```js
 $store.state.value
@@ -35,17 +36,22 @@ export default {
   setup () {
     const store = useStore();
     return {
-        count: computed(() => store.state.value),
+        count: computed(() => store.state.isRoot),
     };
   },
 };
 ```
+
+# Vuex Store
+接下來是store資料夾內的說明
+
 ## getters
-但是不建議直接存取`state`的資料,
+不建議直接存取`state`的資料,
 可以改用`getters`,
 但預設一開始不會幫你建立`getters`
 必須自己建立
-
+剛剛使用範例是用`store.state.isRoot`
+這樣就必須改用`$store.getters.isRoot`
 ```js
 import { createStore } from 'vuex';
 
@@ -58,7 +64,7 @@ export default createStore({
   },
 });
 ```
-然後改用`$store.getters.isRoot`
+
 
 ## mutations
 
